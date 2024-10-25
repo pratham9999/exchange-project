@@ -5,7 +5,7 @@ import { KLine } from "../utils/types";
 import { ChartManager } from "../utils/ChartManger";
 
 
-export function TradeView({market,}:{market:string}){
+export function TradeView({market}:{market:string}){
     const chartRef = useRef<HTMLDivElement>(null);
     const chartManagerRef=useRef<ChartManager>(null);
 

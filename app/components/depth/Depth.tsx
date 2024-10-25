@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-"use client"
-import { useEffect , useState } from "react"
-import { getDepth , getKlines , getTicker, } from "@/app/utils/httpsClients"
-import { BidTable } from "./BidTable"
-import { AskTable } from "./AskTable"
-import { SignalingManager } from "@/app/utils/SignalingManager"
+"use client";
+
+import { useEffect, useState } from "react";
+import { getDepth, getKlines, getTicker, } from "../../utils/httpsClients";
+import { BidTable } from "./BidTable";
+import { AskTable } from "./AskTable";
+import { SignalingManager } from "@/app/utils/SignalingManager";
 
 export function Depth({ market }: {market: string}) {
     const [bids, setBids] = useState<[string, string][]>();
@@ -68,7 +68,7 @@ export function Depth({ market }: {market: string}) {
     </div>
 }
 
-  function TableHeader() {
+function TableHeader() {
     return <div className="flex justify-between text-xs">
     <div className="text-white">Price</div>
     <div className="text-slate-500">Size</div>
